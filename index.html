@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+  <div class="social-header">
+    <a href="admin_login.php" class="admin-btn">Admin Login</a>
+  </div>
+</header>
+
+<body>
+  <h2>Student Registration Form</h2>
+
+  <form action="register.php" method="POST">
+    <label>USN:</label>
+    <input type="text" name="usn" placeholder="Enter your USN" required>
+    <label>Full Name:</label>
+    <input type="text" name="full_name" placeholder="Enter your full_name">
+
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="Enter your mail"required>
+
+    <label>Phone:</label>
+    <input type="text" name="phone" placeholder="Enter your Phone No." required>
+
+    <label>Course:</label>
+    <select name="course" required>
+      <option value="">Select</option>
+      <option value="CSE">CSE</option>
+      <option value="ECE">ECE</option>
+      <option value="MECH">MECH</option>
+      <option value="CIVIL">CIVIL</option>
+    </select>
+
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>
