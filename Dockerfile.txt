@@ -1,0 +1,14 @@
+# Use official PHP image with Apache
+FROM php:8.2-apache
+
+# Copy all your project files into Apache’s default directory
+COPY . /var/www/html/
+
+# Install mysqli extension (needed for MySQL)
+RUN docker-php-ext-install mysqli
+
+# Expose port 80 (Render uses this by default)
+EXPOSE 80
+
+# Optional: enable mod_rewrite (for cleaner URLs later)
+RUN a2enmod rewrite
